@@ -1,0 +1,107 @@
+.logo {
+  font-family: "GT", serif;
+  background: -webkit-linear-gradient(0deg, #4285f4, #db4437, #f4b400, #0f9d58);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animation-rotate-hue {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(720deg); }
+}
+
+.main-front-head {
+  /*background: #0f0c00 no-repeat left;*/
+  background: -webkit-linear-gradient(45deg, #4285f4, #db4437, #f4b400, #0f9d58);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animation-rotate-hue 10s ease 2s infinite alternate-reverse;
+}
+
+.text-g {
+  background: -webkit-linear-gradient(0deg, #212121 0% 20%, #4285f4 20% 40%, #db4437 40% 60%, #f4b400 60% 80%, #0f9d58 80% 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-g {
+  background: linear-gradient(0deg, #212121 0% 20%, #4285f4 20% 40%, #db4437 40% 60%, #f4b400 60% 80%, #0f9d58 80% 100%);
+}
+
+@keyframes animation-bounce-text-gradient {
+  from { background-position: left 0 top 0; }
+  to { background-position: left -446px top 0; }
+}
+
+.animate-heading-text {
+  background: -webkit-repeating-linear-gradient(0deg, #212121 0% 20%, #4285f4 20% 40%, #db4437 40% 60%, #f4b400 60% 80%, #0f9d58 80% 100%) repeat-x;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400px 100%;
+  animation: animation-bounce-text-gradient 4s linear infinite;
+}
+
+.animation-bg-g {
+  background: linear-gradient(90deg, #212121 0% 20%, #4285f4 20% 40%, #db4437 40% 60%, #f4b400 60% 80%, #0f9d58 80% 100%);
+  animation: animation-bounce-text-gradient 8s linear infinite;
+}
+
+@keyframes delicate-bounce {
+  0%, 100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes background-transition {
+  0% {opacity: 1;}
+  10%, 100% { opacity: 0; }
+}
+
+@keyframes animation-error-modal {
+  from { transform: translateY(-400%); }
+  20%, 80% { transform: translateY(50%); }
+  to { transform: translateY(-400%); }
+}
+
+.animate-error-modal {
+  animation: animation-error-modal 3s ease-in-out 1;
+}
+
+.carousel-container {
+  -ms-overflow-style: none;
+  overflow: auto;
+  scroll-behavior: smooth;
+  -webkit-scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  /*scrollbar-color: transparent transparent;*/
+  /*scrollbar-width: none;*/
+  width: 100%;
+}
+
+.carousel-window {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .carousel-window {
+    gap: 8px;
+  }
+}
+
+/* url("https://www.slidebackground.com/uploads/simple/illuminated-simple-powerpoint-backgrounds.jpg") */
